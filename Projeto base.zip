@@ -1,0 +1,38 @@
+Requisição HTTP
+
+Querystring
+após o ponto de ? é a querystring => descrição de buscar/faz sentido para as buscas
+sintaxe da querystring: ?type=grass&name=i
+
+* URL: https://pokeapi.co/api/v2/pokemon?type=grass&name=i
+    ${Endereço}/${path = caminho de identificação do recurso}
+
+Toda requisição tem um método:
+* Request Method
+Get (buscar) / Post (inserir) / Put (atualizar) / Delete (Remover) / Patch
+
+https://pokeapi.co/api/v2/pokemon
+?
+offset=20
+&
+limit=20
+
+* Request Headers / Response Headers:
+Configuração da API (aceita linguagens pt-br, en-us, gl global)
+content-type: application/json
+
+Body robusto de informações / Post:
+significa salvar um pokemon(informação) novo
+
+(Json)
+* Request Body / Response Body:
+{
+    "name": "Nicolasaur"
+}
+
+Status Code: se a requisição foi processada / o que aconteceu com ela:
+- 200 até 299 quer dizer sucesso
+- 300 até 399 quer dizer redirecionamento
+- 400 até 599 quer dizer erro por parte do cliente
+- 500 quer dizer erro interno no servidor
+
